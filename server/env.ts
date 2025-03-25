@@ -618,11 +618,12 @@ export class Environment {
    * getoutline.com
    */
   public get isCloudHosted() {
-    return [
-      "https://app.getoutline.com",
-      "https://app.outline.dev",
-      "https://app.outline.dev:3000",
-    ].includes(this.URL);
+    return env.DEPLOYMENT === "hosted";
+    // return [
+    //   "https://app.getoutline.com",
+    //   "https://app.outline.dev",
+    //   "https://app.outline.dev:3000",
+    // ].includes(this.URL);
   }
 
   /**
